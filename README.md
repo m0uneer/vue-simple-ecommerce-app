@@ -1,3 +1,5 @@
+[![codecov](https://codecov.io/gh/m0uneer/vue-simple-ecommerce-app/branch/main/graph/badge.svg?token=NT195G23E3)](https://codecov.io/gh/m0uneer/vue-simple-ecommerce-app)
+
 # vue-simple-ecommerce-app
 
 ## Project setup
@@ -29,6 +31,3 @@ npm run test:e2e
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

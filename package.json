@@ -1,15 +1,33 @@
 {
   "name": "vue-simple-ecommerce-app",
-  "version": "0.1.0",
+  "version": "0.0.0-development",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
-    "lint": "vue-cli-service lint"
+    "test:e2e-headless": "vue-cli-service test:e2e --headless",
+    "lint": "vue-cli-service lint",
+    "lint-md": "remark .",
+    "codecov": "codecov",
+    "commit": "git-cz",
+    "semantic-release": "semantic-release",
+    "semantic-release:preview": "semantic-release --dry-run",
+    "check-audit": "check-audit --production",
+    "resolve-audit": "resolve-audit --production"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/m0uneer/vue-simple-ecommerce-app.git"
+  },
+  "author": "m.m.mouneer@gmail.com",
+  "license": "ISC",
   "dependencies": {
+    "@cypress/vue": "^3.1.0",
+    "@vuelidate/core": "^2.0.0-alpha.44",
+    "@vuelidate/validators": "^2.0.0-alpha.31",
+    "axios": "^0.27.2",
     "core-js": "^3.8.3",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3",
@@ -18,6 +36,12 @@
   "devDependencies": {
     "@babel/core": "^7.12.16",
     "@babel/eslint-parser": "^7.12.16",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/commit-analyzer": "^8.0.1",
+    "@semantic-release/git": "^9.0.0",
+    "@semantic-release/release-notes-generator": "^9.0.1",
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-e2e-cypress": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
@@ -29,15 +53,31 @@
     "@vue/test-utils": "^2.0.0-0",
     "@vue/vue3-jest": "^27.0.0-alpha.1",
     "babel-jest": "^27.0.6",
+    "codecov": "^3.8.3",
+    "commitizen": "^4.1.2",
+    "commitlint-plugin-function-rules": "^1.1.20",
     "cypress": "^9.7.0",
+    "cz-conventional-changelog": "^3.2.0",
     "eslint": "^7.32.0",
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-vue": "^8.0.3",
     "eslint-plugin-vuejs-accessibility": "^1.1.0",
+    "git-cz": "4.8.0",
+    "husky": "^4.2.5",
     "jest": "^27.0.5",
-    "lint-staged": "^11.1.2"
+    "lint-staged": "^10.2.7",
+    "npm-audit-resolver": "^3.0.0-7",
+    "remark-cli": "^7.0.1",
+    "remark-lint": "^6.0.5",
+    "remark-preset-lint-recommended": "^3.0.3",
+    "semantic-release": "^17.0.8"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
+  },
+  "config": {
+    "commitizen": {
+      "path": "git-cz"
+    }
   }
 }
