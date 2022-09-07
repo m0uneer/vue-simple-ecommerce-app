@@ -1,6 +1,9 @@
 name: CI/CD Pipeline
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   build:
@@ -36,6 +39,16 @@ jobs:
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
+
+      - name: Build
+        run: npm run build
+
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_VUE_SIMPLE_ECOMMERCE_APP }}'
+          channelId: live
+          projectId: vue-simple-ecommerce-app
 
       - name: Semantic releasing
         env:
