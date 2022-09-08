@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/m0uneer/vue-simple-ecommerce-app/compare/v1.0.0...v1.0.1) (2022-09-08)
+
+
+### Bug Fixes
+
+* 🐛 [#3](https://github.com/m0uneer/vue-simple-ecommerce-app/issues/3) supporting multiple env config with dotenv and fixing Firebase base url ([579847e](https://github.com/m0uneer/vue-simple-ecommerce-app/commit/579847e0d68026ced85ef8283524f96c3b32cce6)), closes [#4](https://github.com/m0uneer/vue-simple-ecommerce-app/issues/4)
+
 # 1.0.0 (2022-09-06)
 
 
